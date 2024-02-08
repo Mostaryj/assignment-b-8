@@ -10,11 +10,20 @@
 // [4,-2]                invalid input
 
 
-function sortMaker(a,b){
-    if(a > 0 && b > 0){
-        
+function sortMaker(arr){
+    const [a,b] = arr;
+    if(a < 0 || b < 0){
+        return "invalid input";
+    }
+    if(a === b){
+        return "equal";
+    }
+    if(a > b){
+        return [a,b];
+    }else{
+        return[b,a];
     }
 }
-const input = [2,3];
+const input = [2,8];
 const final = sortMaker(input);
-console.log(input)
+console.log(final)
